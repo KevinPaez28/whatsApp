@@ -23,7 +23,6 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 .header{
   background-color:rgb(19, 105, 45);
@@ -63,7 +62,6 @@ label{
 }
 
 /*CHATS*/ 
-
 .main{
   overflow-y: scroll;
 }
@@ -75,7 +73,6 @@ label{
 .Contenedor-Chats__chat:hover{
 background-color: #adb4b0;
 }
-
 .chat__contenido{
   display: flex;
   align-items: center;
@@ -83,7 +80,6 @@ background-color: #adb4b0;
   width: 95%;
 }
 .chat__Foto-perfil{
-  /* margin: 5px 15px 8px 8px ; */
   width: 45px;
   height: 45px;
   border-radius: 100px;
@@ -96,7 +92,6 @@ background-color: #adb4b0;
   line-height: 30px;
   font-size: 20px;
   color:#111;
-  
 }
 .chat__mensaje{
   color: #111;
@@ -105,7 +100,6 @@ background-color: #adb4b0;
   display: flex;
   align-items: center;
   flex-direction: column;
-
 }
 .chat__mensaje p{
   display: block;
@@ -134,13 +128,14 @@ background-color: #adb4b0;
   color: white;
   cursor: pointer;
 }
-/* ESTADOS */
 
+
+/* ESTADOS */
 .Estados{
  max-width:350px;
  height:600px;
  display: flex;
- flex-direction: column;
+ flex-direction: column; 
 }
 .Contenedor__Estados{
   display: flex;
@@ -173,14 +168,12 @@ background-color: #adb4b0;
  max-width:350px;
  height:600px;
  display: flex;
+ flex-direction: column;
 }
-.Contenedor__Llamadas{
-  display: flex;
+.Contenedor__llamadas{
   height:65px;
   width:330px;
   align-items: center;
-  flex-direction: column;
-
 }
 .Llamada__Clic{
   display: flex;  
@@ -192,16 +185,56 @@ background-color: #adb4b0;
   color: white;
   background-color: rgb(12, 105, 12);
   margin: 10px;
-   flex-direction: column;
-
+  flex-direction: column;
 }
 
+/* Interfaz */
 
+.Content{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
 
+.Content  .Chats { 
+ transition: all 600ms ease;
+ opacity: 0;
+ visibility: hidden;
+ transform: scale(0.90);
+}
+.Content .estados{
+ position: absolute;
+ transition: all 600ms ease;
+ opacity: 0;
+ visibility: hidden;
+ transform: scale(0.90);
+}
+.Content .llamadas{
+ position: absolute;
+ transition: all 600ms ease;
+ opacity: 0;
+ visibility: hidden;
+ transform: scale(0.90);
+}
 
+#Menuinferior__Chats,#Menuinferior__Estados,#Menuinferior__Llamadas{
+  display: none;
+}
 
-
-
-
-
+#Menuinferior__Chats:checked~.Chats
+{
+ opacity: 1;
+ visibility: visible;
+ transform: scale(1);
+}
+#Menuinferior__Estados:checked~.estados{
+ opacity: 1;
+ visibility: visible;
+ transform: scale(1);
+}
+#Menuinferior__Llamadas:checked~.llamadas{
+ opacity: 1;
+ visibility: visible;
+ transform: scale(1);
+}
 
