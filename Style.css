@@ -40,11 +40,13 @@
 }
 .Menusuperior__WhatsApp{
  margin-top: 12px;
+ cursor: pointer;
  
 }
 .Menusuperior__iconos{
   margin-top:12px;
   padding-left:60%;
+  cursor: pointer;
 }
 
 label{
@@ -55,8 +57,10 @@ label{
   display: flex;
   width: 100%;
   justify-content:space-between;
+  
 }
 .Menuinferior__Chats{
+  cursor: pointer;
   border-bottom: 7px solid white;
 
 }
@@ -119,8 +123,8 @@ background-color: #adb4b0;
   height: 50px;
   border-radius:100px;
   background-color: green;
-  position: absolute; 
-  bottom: 25px;
+  bottom: 10px;
+  position: absolute;
   z-index: 1;
   right: 30px;
   align-items: center;
@@ -128,6 +132,7 @@ background-color: #adb4b0;
   color: white;
   cursor: pointer;
 }
+
 
 
 /* ESTADOS */
@@ -143,7 +148,10 @@ background-color: #adb4b0;
   width:330px;
   align-items: center;
 }
+.Contenedor__Estados:hover{
+  background-color: #adb4b0;
 
+}
 .Estados__foto-perfil{
  width: 45px;
   height: 45px;
@@ -167,15 +175,15 @@ background-color: #adb4b0;
 .Llamadas{
  max-width:350px;
  height:600px;
- display: flex;
- flex-direction: column;
+ flex-direction: row;
 }
-.Contenedor__llamadas{
-  height:65px;
-  width:330px;
+
+.Llamada__Clic {
+  display: flex;
   align-items: center;
+  
 }
-.Llamada__Clic{
+.Llamada__Contenido{
   display: flex;  
   align-items: center;
   justify-content: center;
@@ -185,8 +193,31 @@ background-color: #adb4b0;
   color: white;
   background-color: rgb(12, 105, 12);
   margin: 10px;
-  flex-direction: column;
 }
+.Contenedor__Llamadas{
+  height:65px;
+  width:330px;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Contenedor__Llamadas:hover{
+  background-color: #adb4b0;
+}
+.Llamada__Flecha{
+  font-size:12px;
+  margin:2px
+}
+.Llamadas__Content{
+  margin:5px 10px auto;
+}
+
+.Logo__Telefono{
+  margin-left:25%;
+  color:rgb(30, 153, 61)
+}
+
 
 /* Interfaz */
 
@@ -195,7 +226,6 @@ background-color: #adb4b0;
   flex-direction: row;
   position: relative;
 }
-
 .Content  .Chats { 
  transition: all 600ms ease;
  opacity: 0;
